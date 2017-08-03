@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<title>书城首页</title>
+</head>
+<body>
+	<div id="app" style="width: 320px; overflow: hidden; position: relative; height: 100%">
+		<% include include/header.html %>
+		<div class="container-scroll">
+			<div :style="{width: '640px', transitionDuration: duration + 's', transform: translate3d}">
+				<div class="container-wrap" style="width:320px; float:left; position: relative;">
+					<div class="Pull-scroll">
+						<div>
+							<% include include/index-top.html %>
+							<% include include/index-hot.html %>
+							<% include include/index-recommend.html %>
+							<% include include/index-female.html %>
+							<% include include/index-male.html %>
+							<% include include/index-free.html %>
+							<% include include/index-bottom.html %>
+						</div>
+					</div>
+				</div>
+				<div style="width: 320px; float:left;">
+					<% include include/index-shelf.html %>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/static/script/vue.js"></script>
+<script src="/static/script/zepto.min.js"></script>
+<script src="/static/script/pages/index.js"></script>
+</html>
